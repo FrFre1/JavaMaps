@@ -9,14 +9,14 @@ public class HashMapTest {
 	public static void main(String[] args) {
         HashMap<Integer, Student> map = new HashMap<Integer, Student>();        
 
-        // Drei Objekte der Klasse Student werden erzeugt
+        // 3 Objekte der Klasse Student werden erzeugt
         Student st1 = new Student("Topf", "Hans", 12345);
         Student st2 = new Student("Teller", "Hannes", 12323);
         
         // Student st3 = new Student("Besteck", "Maxi", 12345); 
         Student st3 = new Student("Besteck", "Maxi", 12346);  
 
-        // Einf�gen der Objekte in die HashMap
+        // Einfuegen der Objekte in die HashMap
         // Matrikelnummer wird als Key eingetragen 
         map.put((st1.getMatrikelnummer()), st1);
         map.put((st2.getMatrikelnummer()), st2);    
@@ -32,18 +32,18 @@ public class HashMapTest {
            System.out.println(entry.getValue());
         }
         
-        // Objekt zugreifen �ber den Key        
+        // Objekt zugreifen ueber den Key        
         Student student = map.get(12345);
         System.out.println("Student at index 12345 is: "+ student.name);               
 
         // Student st1 wird durch st3 ersetzt, da die 
-        // Matrikelnummer schon als Schl�ssel vergeben ist
+        // Matrikelnummer schon als Schluessel vergeben ist
         map.put(12345, st3);
         
         student = map.get(12345);
         System.out.println("Student at index 12345 is: "+ student.name);  
         
-        //Eintr�ge entfernen
+        //Eintraege entfernen
         map.remove(12345);
         System.out.println("Map key and values after removal:");
         Set set2 = map.entrySet();
